@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="IteamData" load_steps=7 format=3 uid="uid://oay8pgg6xqm3"]
+
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect.gd" id="1_npnl6"]
+[ext_resource type="AudioStream" uid="uid://dkedqqbfs2050" path="res://Audio/power_up.wav" id="2_o88yn"]
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect_heal.gd" id="3_u8nyi"]
+[ext_resource type="Script" path="res://Container/Items/item_data.gd" id="4_vpxji"]
+[ext_resource type="Texture2D" uid="uid://8midob2y2bm6" path="res://ImgLib/Items/Medipack.png" id="5_nurkv"]
+
+[sub_resource type="Resource" id="Resource_6e8k2"]
+script = ExtResource("3_u8nyi")
+heal_amount = 1
+audio = ExtResource("2_o88yn")
+use_description = ""
+
+[resource]
+script = ExtResource("4_vpxji")
+name = "Medizin"
+description = "\"Kotex xì tin\"
+- Tự tin khoe cá tính
++2 HP"
+texture = ExtResource("5_nurkv")
+effects = Array[ExtResource("1_npnl6")]([SubResource("Resource_6e8k2"), null])

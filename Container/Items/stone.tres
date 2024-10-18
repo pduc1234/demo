@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="IteamData" load_steps=5 format=3 uid="uid://cw7cndqijlksp"]
+
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect.gd" id="1_jicxd"]
+[ext_resource type="Script" path="res://Container/Items/item_data.gd" id="1_qsexe"]
+[ext_resource type="Texture2D" uid="uid://ckkk7ydibmc7i" path="res://ImgLib/Items/output_tileset.png" id="2_c03rv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dn2h"]
+atlas = ExtResource("2_c03rv")
+region = Rect2(1105, 605, 10, 10)
+
+[resource]
+script = ExtResource("1_qsexe")
+name = "Stone"
+description = "\"ĐÁ!\"
+- Đập ra mà hít thì phê lắm."
+texture = SubResource("AtlasTexture_2dn2h")
+effects = Array[ExtResource("1_jicxd")]([])

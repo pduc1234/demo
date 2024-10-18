@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4g2ci05vfrvh"]
+
+[ext_resource type="Script" path="res://Assets/Props/Plant/plant.gd" id="1_okw45"]
+[ext_resource type="Texture2D" uid="uid://blbfa8awj6jsp" path="res://ImgLib/Backgrounds/Tilesets/TilesetElement.png" id="1_ulrhd"]
+[ext_resource type="PackedScene" uid="uid://bphngbb02cqne" path="res://Container/Global/HitBox/HitBox.tscn" id="2_rwlte"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ckgu"]
+size = Vector2(32, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6v5j"]
+atlas = ExtResource("1_ulrhd")
+region = Rect2(128, 112, 32, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ten4a"]
+size = Vector2(32, 31)
+
+[node name="Books" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_okw45")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_6ckgu")
+debug_color = Color(0.987249, 0, 0.315049, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_w6v5j")
+
+[node name="HitBox" parent="." instance=ExtResource("2_rwlte")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ten4a")

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="IteamData" load_steps=7 format=3 uid="uid://cqgj5aerhl7vl"]
+
+[ext_resource type="Script" path="res://Container/Items/item_data.gd" id="1_bn5c3"]
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect.gd" id="1_dwxyq"]
+[ext_resource type="Texture2D" uid="uid://rjn4iuiu6ybg" path="res://ImgLib/Items/Nut.png" id="2_7a2nx"]
+[ext_resource type="AudioStream" uid="uid://bt5gcib0xsqfn" path="res://Audio/coin.wav" id="2_e3psf"]
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect_coin.gd" id="3_blrfm"]
+
+[sub_resource type="Resource" id="Resource_xl25d"]
+script = ExtResource("3_blrfm")
+coin_amount = 3
+audio = ExtResource("2_e3psf")
+use_description = ""
+
+[resource]
+script = ExtResource("1_bn5c3")
+name = "Gem"
+description = "\"Vàng bạc đá quý.\"
+- Đéo có tác dụng gì, để vào cho đẹp."
+texture = ExtResource("2_7a2nx")
+effects = Array[ExtResource("1_dwxyq")]([SubResource("Resource_xl25d"), null])

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="IteamData" load_steps=7 format=3 uid="uid://c82ahqk27fk66"]
+
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect.gd" id="1_ihgdc"]
+[ext_resource type="AudioStream" uid="uid://dkedqqbfs2050" path="res://Audio/power_up.wav" id="2_41ns0"]
+[ext_resource type="Script" path="res://Container/Items/item_data.gd" id="2_ennee"]
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect_heal.gd" id="3_gx6id"]
+[ext_resource type="Texture2D" uid="uid://c8v2p4jlrjkxd" path="res://ImgLib/Items/LifePot.png" id="5_rrlof"]
+
+[sub_resource type="Resource" id="Resource_hxii5"]
+script = ExtResource("3_gx6id")
+heal_amount = 1
+audio = ExtResource("2_41ns0")
+use_description = ""
+
+[resource]
+script = ExtResource("2_ennee")
+name = "Potision"
+description = "\"Hoan lạc dược\"
+- Uống vào sung thì đừng hỏi.
++1 HP"
+texture = ExtResource("5_rrlof")
+effects = Array[ExtResource("1_ihgdc")]([SubResource("Resource_hxii5")])

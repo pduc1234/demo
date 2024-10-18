@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="IteamData" load_steps=8 format=3 uid="uid://d2l8011yhnem5"]
+
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect.gd" id="1_3xkyf"]
+[ext_resource type="AudioStream" uid="uid://bt5gcib0xsqfn" path="res://Audio/coin.wav" id="2_6k56w"]
+[ext_resource type="Script" path="res://Container/Items/item_data.gd" id="2_arwkk"]
+[ext_resource type="Script" path="res://Container/Items/ItemEffect/item_effect_coin.gd" id="2_xw1us"]
+[ext_resource type="Texture2D" uid="uid://cwkwp3twssish" path="res://ImgLib/Items/coin.png" id="3_e1o3s"]
+
+[sub_resource type="Resource" id="Resource_5sgda"]
+script = ExtResource("2_xw1us")
+coin_amount = 1
+audio = ExtResource("2_6k56w")
+use_description = ""
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he5ke"]
+atlas = ExtResource("3_e1o3s")
+region = Rect2(99, 3, 10, 10)
+
+[resource]
+script = ExtResource("2_arwkk")
+name = "Coin"
+description = "\"Tiền\"
+- Đời người không ai chọn nghèo cả.
++1 coin"
+texture = SubResource("AtlasTexture_he5ke")
+effects = Array[ExtResource("1_3xkyf")]([SubResource("Resource_5sgda")])

@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkb5gokg8ijyf"]
+
+[ext_resource type="Script" path="res://Container/PauseMenu/Inventory/inventory.gd" id="1_c4137"]
+[ext_resource type="Texture2D" uid="uid://byyf354ytl4hc" path="res://theme/Sprite sheet for Basic Pack.png" id="1_ddxl4"]
+[ext_resource type="PackedScene" uid="uid://bgrsybqsgi4ml" path="res://Scene/PauseMenu/Inventory/InventorySlot.tscn" id="2_0jk0u"]
+[ext_resource type="Script" path="res://Container/PauseMenu/Inventory/inventory_ui.gd" id="3_s17he"]
+[ext_resource type="Resource" uid="uid://dyvo224y6jvho" path="res://Container/PauseMenu/Inventory/player_inventory.tres" id="4_vgxiv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mj0i"]
+content_margin_top = 0.0
+texture = ExtResource("1_ddxl4")
+texture_margin_left = 8.0
+texture_margin_top = 21.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(455, 139, 30, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2n8m"]
+texture = ExtResource("1_ddxl4")
+texture_margin_left = 15.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+region_rect = Rect2(153, 57, 30, 30)
+
+[node name="Inventory" type="CanvasLayer"]
+script = ExtResource("1_c4137")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.266667, 0.266667, 0.266667, 0.576471)
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -272.0
+offset_right = 448.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" type="Label" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 4.0
+offset_top = 24.0
+offset_right = 4.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 45
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="ItemDesciption" type="Label" parent="Control/Panel"]
+layout_mode = 1
+offset_left = 513.0
+offset_top = 148.0
+offset_right = 705.0
+offset_bottom = 183.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6mj0i")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -380.0
+offset_right = 478.0
+offset_bottom = -85.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c2n8m")
+
+[node name="GridContainer" type="GridContainer" parent="Control/Panel/PanelContainer"]
+layout_mode = 2
+columns = 8
+script = ExtResource("3_s17he")
+data = ExtResource("4_vgxiv")
+
+[node name="InventorySlot" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Control/Panel/PanelContainer/GridContainer" instance=ExtResource("2_0jk0u")]
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]

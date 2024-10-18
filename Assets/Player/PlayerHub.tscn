@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3lthhixg4i0a"]
+
+[ext_resource type="Script" path="res://Container/Player/player_hub.gd" id="1_03q4i"]
+[ext_resource type="PackedScene" uid="uid://hk8lx6whtw1d" path="res://Scene/heart.tscn" id="2_ewmjk"]
+[ext_resource type="Texture2D" uid="uid://byyf354ytl4hc" path="res://theme/Sprite sheet for Basic Pack.png" id="2_sy6s0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mbjs"]
+atlas = ExtResource("2_sy6s0")
+region = Rect2(504, 131, 35, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5evo"]
+atlas = ExtResource("2_sy6s0")
+region = Rect2(628, 115, 7, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7xn7"]
+atlas = ExtResource("2_sy6s0")
+region = Rect2(754, 194, 12, 12)
+
+[node name="PlayerHub" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_03q4i")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Layout" type="Sprite2D" parent="Control"]
+position = Vector2(64, 56)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_3mbjs")
+
+[node name="MoneyLabel" type="Label" parent="Control/Layout"]
+texture_filter = 5
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -8.0
+offset_top = 3.0
+offset_right = -19.0
+offset_bottom = 17.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 2
+
+[node name="Coin" type="Sprite2D" parent="Control"]
+position = Vector2(40, 79)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_a5evo")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 25.0
+offset_right = 99.0
+offset_bottom = 113.0
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 2
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="Heart" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart2" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart3" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart4" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart5" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart6" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart7" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart8" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart9" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart10" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart11" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart12" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart13" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="Heart14" parent="Control/HFlowContainer" instance=ExtResource("2_ewmjk")]
+layout_mode = 2
+
+[node name="PauseBtn" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_top = 16.0
+offset_right = -32.0
+offset_bottom = 48.0
+grow_horizontal = 0
+icon = SubResource("AtlasTexture_s7xn7")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Control/PauseBtn" to="." method="_on_pause_btn_pressed"]
