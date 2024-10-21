@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" version="24.8.0">
   <diagram name="Trang-1" id="TLhRaHLdWm5z-oJn_bGT">
-    <mxGraphModel dx="3134" dy="2494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2287" dy="2105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -19,7 +19,7 @@
             <mxPoint x="-31" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5rQebmFAlVWXI47vPmU4-63" value="Kết nối người chơi đến Server." style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+        <mxCell id="5rQebmFAlVWXI47vPmU4-63" value="&lt;b style=&quot;font-size: 20px;&quot;&gt;Database&lt;/b&gt;&lt;div style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Server&lt;/b&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="571" y="-160.5" width="110" height="170" as="geometry" />
         </mxCell>
         <mxCell id="5rQebmFAlVWXI47vPmU4-64" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="5rQebmFAlVWXI47vPmU4-63" source="5rQebmFAlVWXI47vPmU4-65">
@@ -121,14 +121,14 @@
             <mxPoint y="710" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5rQebmFAlVWXI47vPmU4-92" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5rQebmFAlVWXI47vPmU4-76" target="5rQebmFAlVWXI47vPmU4-93">
+        <mxCell id="5rQebmFAlVWXI47vPmU4-92" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="5rQebmFAlVWXI47vPmU4-76" target="5rQebmFAlVWXI47vPmU4-93">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="240" y="710" as="sourcePoint" />
             <mxPoint x="290" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5rQebmFAlVWXI47vPmU4-93" value="Chưa có dữ liệu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="260" y="682.5" width="90" height="30" as="geometry" />
+        <mxCell id="5rQebmFAlVWXI47vPmU4-93" value="Chưa có dữ liệu.&lt;div&gt;Lưu thông tin vào db.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="640" width="110" height="72.5" as="geometry" />
         </mxCell>
         <mxCell id="5rQebmFAlVWXI47vPmU4-94" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="5rQebmFAlVWXI47vPmU4-76" target="5rQebmFAlVWXI47vPmU4-86">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -158,14 +158,20 @@
             <mxPoint x="289" y="50" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="5rQebmFAlVWXI47vPmU4-107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5rQebmFAlVWXI47vPmU4-103" target="5rQebmFAlVWXI47vPmU4-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="5rQebmFAlVWXI47vPmU4-103" value="Đăng nhập thành công" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="199" y="70" width="80" height="40" as="geometry" />
+          <mxGeometry x="586" y="50" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="5rQebmFAlVWXI47vPmU4-104" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5rQebmFAlVWXI47vPmU4-103" target="5rQebmFAlVWXI47vPmU4-71">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="19" y="80" as="sourcePoint" />
             <mxPoint x="69" y="30" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="5rQebmFAlVWXI47vPmU4-106" value="Kết nối người chơi đến Server." style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="566" y="130" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
